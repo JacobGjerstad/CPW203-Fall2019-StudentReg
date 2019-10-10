@@ -44,6 +44,16 @@ function processForm(){
     clearForm();
 }
 
+function displayStudent(s:Student):void{
+    // creates <li>
+    let newItem = document.createElement("li");
+    newItem.innerText = s.firstName + " " + s.lastName;
+    let displaySelection = document.querySelector("#student-list > ul");
+
+    // Add <li> as a child to <ul>
+    displaySelection.appendChild(newItem);
+}
+
 function getStudentFromForm():Student{
     let tempStudent = new Student();
     tempStudent.firstName = getInputValue("first-name");

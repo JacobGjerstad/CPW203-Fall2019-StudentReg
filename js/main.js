@@ -17,6 +17,12 @@ function processForm() {
     displayStudent(nextStudent);
     clearForm();
 }
+function displayStudent(s) {
+    var newItem = document.createElement("li");
+    newItem.innerText = s.firstName + " " + s.lastName;
+    var displaySelection = document.querySelector("#student-list > ul");
+    displaySelection.appendChild(newItem);
+}
 function getStudentFromForm() {
     var tempStudent = new Student();
     tempStudent.firstName = getInputValue("first-name");
