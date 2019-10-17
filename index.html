@@ -6,33 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Student Registration</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <h1>Student Registration</h1>
 <form id="reg-form">
-    <label for="first-name">First Name:</label>
-    <input type="text" name="first-name" id="first-name">
+    <input type="text" aria-placeholder="Enter your legal first name." placeholder="First Name" name="first-name" id="first-name">
     <span>*</span>
     <br><br>
 
-    <label for="last-name">Last Name:</label>
-    <input type="text" name="last-name" id="last-name">
+    <input type="text" aria-placeholder="Enter your legal last name." placeholder="Last Name" name="last-name" id="last-name">
     <span>*</span>
     <br><br>
 
-    <label for="dob">Date of Birth:</label>
-    <input type="text" name="dob" id="dob">
+    <input type="text" aria-placeholder="Enter your date of birth." placeholder="Date of Birth" name="dob" id="dob">
     <span>*</span>
     <br><br>
 
-    <label for="address">Address:</label>
-    <input type="text" name="address" id="address">
+    <input type="text" aria-placeholder="Enter your primary address." placeholder="Address" name="address" id="address">
     <span>*</span>
     <br><br>
 
-    <label for="program">Program of study:</label>
     <select id="program">
+        <option selected value="">-- Please choose a program --</option>
         <option value="CPW">Computer proramming</option>
         <option value="DED">Digital Entertainment &amp; Design</option>
     </select>
@@ -48,8 +45,8 @@
     </div>
 
     <div id="display">
-        <h2>Name goes here...</h2>
-        <p>Name is studying program</p>
+        <h2></h2>
+        <p></p>
     </div>
 
     <script src="js/main.js"></script>
