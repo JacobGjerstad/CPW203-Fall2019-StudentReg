@@ -46,6 +46,11 @@ function processForm(){
     clearForm();
 }
 
+function clearForm(){
+    let regForm = <HTMLFormElement>document.getElementById("reg-form");
+    regForm.reset();
+}
+
 function displayStudent(stu:Student):void{
     // creates <li>
     let newItem = document.createElement("li");
@@ -53,7 +58,7 @@ function displayStudent(stu:Student):void{
     let displaySelection = document.querySelector("#student-list > ul");
 
     // Embed student data in <li>
-    newItem.setAttribute("data-progrma", stu.program);
+    newItem.setAttribute("data-program", stu.program);
     newItem.setAttribute("data-address", stu.address);
     newItem.setAttribute("data-birthdate", stu.dateOfBirth.toString());
 
@@ -70,7 +75,7 @@ function showStudentData(){
     let currListItem = <HTMLLIElement>this;
     let name = currListItem.innerText;
     let program = currListItem.getAttribute(programAttr);
-    // alert(name + " is studying " + program);
+    //alert(name + " is studying " + program);
 
     let h2 = document.querySelector("#display > h2");
     h2.innerHTML = name;

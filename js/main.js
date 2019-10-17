@@ -18,11 +18,15 @@ function processForm() {
     displayStudent(nextStudent);
     clearForm();
 }
+function clearForm() {
+    var regForm = document.getElementById("reg-form");
+    regForm.reset();
+}
 function displayStudent(stu) {
     var newItem = document.createElement("li");
     newItem.innerText = stu.firstName + " " + stu.lastName;
     var displaySelection = document.querySelector("#student-list > ul");
-    newItem.setAttribute("data-progrma", stu.program);
+    newItem.setAttribute("data-program", stu.program);
     newItem.setAttribute("data-address", stu.address);
     newItem.setAttribute("data-birthdate", stu.dateOfBirth.toString());
     console.log(newItem);
